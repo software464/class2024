@@ -1,0 +1,23 @@
+Create a html page that loads a JavaScript file. In the JavaScript create 2 variables called myName and email and set the values equal to your name and your email.
+Add another script tag to the page to load another JavaScript file, and in this separate file, write JavaScript code that uses console.log to show the (global) name and email variables you created in the other script. 
+We didn't have a chance to see this yet in class, but you can (for debugging purposes mostly as it isn't very nice looking) use "prompt" to popup a dialog like message box that asks the user a question and returns what the user typed in. For example:
+food = prompt("Whats your favorite food");
+
+the variable food would then equal whatever the user typed in.
+You can also use an alert to just show the user a message. For example to show the value of the food variable:
+
+alert(food);
+
+See https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt and 
+https://developer.mozilla.org/en-US/docs/Web/API/Window/alert for details.
+
+Add code to ask the user to enter their name and then print out (using console.log) or show using an Alert what they entered. (see also "confirm" which is similar to prompt and alert.)
+Also as discussed in class, you should make sure to 'use strict'; at the top of your file for better modern behavior.
+Make sure to set up eslint as we began to set it up in class. 
+Note one difference in the instructions below from what we did in class - below we are specifying to use eslint version 8 (notice the @8) instead of the latest which is version 9. Seems version 9 (recently released) made changes to the config file such that the .eslintrc file we wrote in class doesn't work. Installing the previous version will make it work (if you already installed 9 no problem, just run the below to install 8 instead). We didn't have a chance to set any useful rules yet, but the one sample rule we turned on (no ++) should work. Check to make sure you see a warning if you use ++ in your code. We will (turn this rule off and) add more useful rules next class iy"h (and perhaps switch to using the latest eslint)
+
+To install eslint you need to install the following:
+node - https://nodejs.org/en/ - download the LTS version, install, accept all defaults.
+eslint - run the following in a command prompt or Visual Studio Code terminal: npm i -g eslint@8 (if you get any errors it's probably filter related, you can try running npm set strict-ssl=false first to bypass ssl which is causing the issue, then run  npm i -g eslint,  then run npm set strict-ssl=true afterwards to turn it back on as it's not really safe, you really need to get filter adjusted)
+eslint plugin - in Visual Studio Code go to the extensions, and find and install the eslint extension
+Shloime Lubowsky

@@ -1,0 +1,183 @@
+body{ 
+    
+}
+nav{
+
+    width: 100%;
+    position: fixed;
+    margin: -1em;
+    left: 0px;
+    top: 0px;
+    
+  }
+    
+
+
+ul{
+    list-style-type: none;
+    padding-left: 10em;
+    
+}
+
+nav ul{
+    display: flex;
+    justify-content: left;
+    background-color: black;
+    color: white;
+
+}
+
+li{
+    margin-right: 1em;
+}
+  div p {
+    text-align: justify;
+
+}
+
+@media ( 1000px <=  width) {
+    body{
+        
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr ;
+        grid-template-rows: 150px 50px 150px 50px 100px 200px 100px max-content max-content max-content max-content;
+        gap: 1em;
+
+    }
+
+    body  section:nth-child(1){
+       background-color: blue;
+       grid-column: 1/2;
+       grid-row:  3/4;
+   }
+
+    body section:nth-child(2){
+        
+        grid-column: 2/3;
+        grid-row:  3/4;
+    }
+
+   body section:nth-child(3){
+        
+        grid-column: 3/4;
+        grid-row:  3/4;
+   }
+   header{
+
+    background-color: blue;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 80%;
+   }
+   main{
+    grid-column: 1/4;
+    grid-row: 2/3;
+   }
+   nav{
+    
+   }
+    form{
+        grid-row-start:  7;
+    }
+    #Financials{
+        grid-row-start: 8;
+        grid-column: 1/-1;
+    }
+}
+
+form{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content:  center;
+    grid-column: 1/-1;
+    align-items: center;
+    
+}
+
+form label{
+    align-self: flex-end;
+
+}
+
+
+
+header{
+    background-color: lightblue;
+    margin: auto;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-style: groove;
+    
+    width: 80%;
+    margin: auto;
+  }
+
+  td,
+  th {
+    /* border: 1px solid black; */
+    /* border-bottom: 1px solid black; */
+    padding: .5em;
+  }
+
+  td {
+    
+     border: 1px solid black; 
+    text-align: right;
+  }
+
+  tfoot {
+    /*color: red;*/
+    
+    color: white;
+  }
+
+  caption {
+    caption-side: bottom;
+  }
+
+  /*.even {
+    background-color: lightblue;
+  }*/
+
+  /*0 1 2 3 2*0=0, 2*1=2  2*2=4 2*3=6*/
+  /*tbody tr:nth-child(2n) {
+    background-color: lightblue;
+  }*/
+
+  /*tbody tr:nth-child(2n+1) {
+    background-color: lightblue;
+  }*/
+
+  /*tbody tr:nth-child(-n+3) {
+    background-color: lightblue;
+  }*/
+
+  table tbody tr:hover {
+    background-color: pink; /*!important;*/
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: lightblue;
+  }
+
+  table{
+    grid-row-start: 9;
+    grid-column-start: 2;
+  }
+article{
+    grid-column:1/-1 ;
+    grid-row-start: 10;
+
+}
+footer{
+    height: 3em;
+    padding-left: 10em;
+    width: 100%;
+    color: white;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

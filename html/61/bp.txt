@@ -1,0 +1,16 @@
+make css big t.
+use 8 divs with backround color.
+disp;ay grid
+make width and height
+use 4 rows and 4 columns 
+columns 250 50 50 250
+rows 100 50 50 100(the uneven rows is to create the shape of a T)
+after grid is shaped begin filling with column start and column end.
+///////////////////
+part 2...
+create 7 divs for small layout.
+--  small/  --../big
+..          ....
+..
+..
+
