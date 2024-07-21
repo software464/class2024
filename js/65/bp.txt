@@ -1,0 +1,25 @@
+we need to write 2 functions that accepts one param.
+we need to do math on this param in the body of the function and return the result.
+well focus on celsius first once we learn how to write the math for that well do farenhait.
+main challenge is to figure out how to write tha math for number to be returned.
+in pseodo code it will look something lile this:
+return a/5*9+32. maybe ((a/5)*9)+32. yes well try this. well do in console first.
+YES IT WORKED IN CONSOLE!!!
+so lets now just spell out the function.
+function convert(x){
+    return ((x/5)*9)+32
+    //celsius ((x-32)*5)/9
+}
+
+Complete
+///////
+now we need to get a variable from user using promt.
+simple.
+get variable from prompt;
+call function with that prompt.
+complete.
+///////
+brush up.
+COMPLETE...
+only did promt for f to c.
+ for extra credit do c to f. with one function but conditional for c or f.

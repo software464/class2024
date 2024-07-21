@@ -1,0 +1,7 @@
+For homework:
+We didn't really get past the introductory stage far enough to write any substantial JavaScript, but for homework, practice writing some functions and calling them. Make sure to use a linter with decent rules set up (extend eslint recommended to start with), 'use strict', and let and const instead of var.
+Write two functions, one to convert Farenheit to Celsius, and one to convert Celsius to Farenheit. Call each with several values and print out the result. Formulas to convert are:
+    °C to °F - Divide by 5, then multiply by 9, then add 32
+    °F to °C - Deduct 32, then multiply by 5, then divide by 9
+Use prompt to get a value from the user to convert and then use alert to show them the result.
+Shloime Lubowsky
