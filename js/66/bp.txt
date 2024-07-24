@@ -1,0 +1,32 @@
+every function for an array.
+
+our check will see if they are all uppercase using  built in toUppercase 
+function(checking every individual letter is too painstaking)
+.
+
+we need to:
+callback to check if word is uppercase.
+we need to do for every single one. so best option is to check for false. and return that.
+if they are all true then well return true.
+
+
+
+///.
+ourEvery(arraay, callback){
+    for(array.length){
+        if(callbacknumbers[i]){
+
+        }
+    }
+
+}
+
+ran into problems bec the"!" was not returning the correct evaluation well continue tom
+
+
+3 functions:
+every.
+some.
+onlyif: 3 params array clb action.
+this should use built in filter and for each.
+(unclear if should make diff onlyif without  any built in functions)

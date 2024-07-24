@@ -1,0 +1,21 @@
+
+Some practice passing functions (callbacks). Try Implementing the callbacks using arrow functions (maybe first do regular functions to get it working, then rewrite as arrow if you aren't yet used to the arrow syntax). Refer to the arrayFunctions.js file from last class for some examples of the arrow function syntax. (Note - I added one more example in addition to "some" and "every" which were mentioned in class.)
+
+1 - Write your own version of the built in array "every" function (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+Basic idea is to loop through the entire array checking if each element passes the supplied test (callback). If they all pass, return true, if any fail, return false. Very similar to the filter example we did in class, but instead of building up an array of the elements that pass to return, we are just looking to return false if any fail, otherwise return true.
+Note that for most efficient implementation, you can stop checking as soon as one fails. If even one fails, we already know the result is false, no need to continue checking the rest.
+Call it passing an array of letters (e.g. ['a', 'b', 'c'] or ['a', 'B', 'c']) and a function that tests whether all letters are uppercase. One way you can test to see if a letter is uppercase is like this: if (letter === letter.toUpperCase()) // its uppercase
+Call it again, this time passing a function that tests whether all are lowercase.
+Call the built in version of array.every with the same callbacks and verify that you get the same results.
+
+2 - Write your own version of the built in array "some" function (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+Implementation should be very similar to every. Note that this time for the most efficient implementation as soon as one passes you can stop checking the rest as we already have the answer.
+Call it passing an array of letters (e.g. ['a', 'B', 'c']) and a function that tests whether some letters are uppercase. One way you can test to see if a letter is uppercase is like this: if (letter === letter.toUpperCase()) // its uppercase
+Call it again, this time passing a function that tests whether some are lowercase.
+Call the built in version of array.some with the same callbacks and verify that you get the same results.
+
+3  - Write a function called onlyIf that takes 3 parameters, an array, a 'test' callback and an 'action' callback. Call the action callback for each element of the array that passes the test callback - but not for those that don't - kind of like a combination of filter and forEach.
+
+4 - There is no built in onlyIf. Write code to accomplish the same things but this time using the built in array operators filter and forEach instead.
+
+As always, please use a linter with reasonable settings on your code to ensure you write quality code.
