@@ -2,24 +2,24 @@
 function ourEvery(array, callback) {
     for (let i = 0; i < array.length; i++) {
         if (!callback[array[i]]) {
-            console.log("false");
-            return;
+            
+            return false;
 
         }
 
     }
-    console.log("true");
+    return true;
 
 }
 function ourSome(array, callback) {
     for (let i = 0; i < array.length; i++) {
         if (callback[array[i]]) {
-            console.log("true");
-            return;
+            
+            return true;
 
         }
     }
-    console.log("false");
+    return false;
 }
 
 
@@ -31,9 +31,9 @@ const mixed = ["a", "B", "c"];
 function isUpper(letter) {
     return letter === letter.toUpperCase();
 }
-ourEvery(upper, isUpper);
-ourEvery(lower, isUpper);
+console.log(ourEvery(upper, isUpper));
+console.log(ourEvery(lower, isUpper));
 ourSome(mixed, isUpper);
-ourSome(lower, isUpper);
+console.log(ourSome(lower, isUpper));
 
-console.log(isUpper("HI"));
+//console.log(isUpper("HI"));

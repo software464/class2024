@@ -1,0 +1,8 @@
+ok so we nedda make a iife finction that return 2 functions.
+//////
+next needa write these 2 functions.
+to get day and the number off day.
+ok we got idea.
+well have one arrayand srite:
+if day === days[i] return day.
+for other way around well do if day number ===i return i+1.
