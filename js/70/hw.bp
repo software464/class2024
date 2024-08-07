@@ -1,0 +1,30 @@
+structure of Div 
+button inside div inner text click me 
+2 clb functions
+startflashing{
+    loop thorough color array
+    ////
+    additional:
+    button innertxt
+
+}
+
+stopflashing{
+    clearinterval;
+    (will be the last backgroind color)
+    ////
+    additional:
+    button innertxt
+}
+
+for clearinterval
+need to capture current interval which will be changing.
+
+onClick function{
+    if start{
+        setInterval startflashing
+    }
+    else{
+        clearinterval
+    }
+}

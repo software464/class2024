@@ -1,0 +1,13 @@
+
+Shloime Lubowsky <slubowsky.course@gmail.com>
+Wed, Jul 31, 11:03 PM (4 days ago)
+to Software, Avraham, Miriam, Nechama, Yehoshua, Raizel, Leah, Avraham, Goldy, Shaul, Mordechai, Chayala, Ricki, David, David, Yakov, Michael, Michoel, Moshe, Tova, Yaffa, Hudi, Chavi, Yakov, Nesanel, Leo, Simcha, Yitzchok, Moshe, Shalom, Raizy, Chani, Getzel, Rachel, Faige, Ahuva, Azriel
+
+For homework, create a html page with a single button in it. Add an event listener so that whenever this button is clicked, a new button is created and added to the page (element.addEventListener('click', callback func here...)). When this new button is clicked, it should also add a new button, and so on for each button created. 
+The text for each button should be an incrementing number so you should see something like below after clicking 3 times (1 is there at start)
+image.png
+
+One way to create a button from JavaScript is to use document.createElement  e.g. const myNewButton = document.createElement('button') will create a button element - that is not yet part of the html in the page. You can add it to a particular existing element in the page using appendChild, e.g. document.body.appendChild(myNewButton) will add myNewButton to the end of the body element of the page.
+You can of course add event listeners to this button just as you can add event listeners to buttons that were created in the HTML the normal way as well as set its innerText or innerHTML...(alternatively recall that we saw at the end of class tonight that events bubble up to their parents and can be handled at the parent level if desired, why not try doing it both ways...)
+
+Of course you should not be creating any unnecessary globals (IIFE) and in general be linting your code with reasonable settings to ensure quality code.

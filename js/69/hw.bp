@@ -1,0 +1,4 @@
+we can create a button the page that has a listner for clocks
+ok so will have one factory func that creates buttons.
+this func will add a button and an eventlistener.
+it woll have a arching variable that increments with each click and that variables value will be the innertxt

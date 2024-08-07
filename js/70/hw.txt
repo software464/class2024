@@ -1,0 +1,4 @@
+For homework please do the following:
+Create a web page with some content (so it has some height and something to see). Write JavaScript that uses setInterval to change the color of the page and text every so often (for the colors you can simply have an array of colors you cycle through, or if you want it to be a bit more sophisticated you can use RGB and cycle through 0-255 for each of r, g, and b (looping through hex is certainly possible but probably more difficult), or google how to pick a random number in JavaScript and create random colors each time, etc...).
+Add a button to start and stop the color changing.
+Note that rapidly flashing colors can be annoying/dangerous to some people that are sensitive to it, so when doing this homework, it is advisable not to make the colors change too frequently. Once a second (1000 milliseconds - or 1 Hz) should be safe

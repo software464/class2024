@@ -1,6 +1,6 @@
 "use strict";
 const dayutils=(function () {
-    const days=["sunday","monday","tuesday","wwdensday"]
+    const days=["sunday","monday","tuesday","wdensday","thursday","friday","saturday"]
 
     
 
@@ -14,18 +14,18 @@ const dayutils=(function () {
     
      function getDayName(number ) {
        for (let i = 0; i < days.length; i++) {
-            if(number===i)
+            if(number-1===i)
                
             return days[i];
             
         }
 
-        return{
-            getDayName,
-            getDayNumber
-        };
+        
     }
-}
+    return{
+        getDayName,
+        getDayNumber
+    };
+}());
 
 
-());
