@@ -1,6 +1,6 @@
 (async function () {
     "use strict";
-    const videoHolders = document.querySelectorAll(".videoHOlder");
+    const videoHolders = document.querySelectorAll(".videoHolder");
     console.log(videoHolders);
     const videoElement = document.querySelector('.videoPlayer');
     ///fetching item

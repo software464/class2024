@@ -4,11 +4,12 @@
   const wikistuff = $('#wiki');
   const wikiText = $('#wikiText');
   const wikiInput = $('#wikiInput');
-  
+
 
   //loading map
   const { Map } = await google.maps.importLibrary('maps');
   const { AdvancedMarkerElement } = await google.maps.importLibrary('marker');
+  const { DrawingManager } = await google.maps.importLibrary('drawing');
   const map = new Map(document.getElementById('map'), {
     zoom: 18,
     center: { lat: 40.09564277325912, lng: -74.22203857900014 },
@@ -46,9 +47,9 @@
       const theLi = $(`<li> <strong>${result.title}</strong> <p>${result.summary}</p>
         <img src="${result.thumbnailImg}"/></li>`)
         .appendTo(wikistuff)
-        .click(()=> {
+        .click(() => {
           console.log("clicked");
-         
+
           map.panTo({ lat: result.lat, lng: result.lng });
         });
 
@@ -86,4 +87,89 @@
 
     //map.fitBounds(bounds);
   }
+  //adding drawing markers to map
+  const drawingManager = new DrawingManager();
+  drawingManager.setMap(map);
+  //adding markers to local storage
+  const markers = [];
+  const rects = [];
+  const circles = [];
+  drawingManager.addListener('markercomplete', e => {
+    if(localStorage.markers){
+      const localMarkers=JSON.parse(localStorage.markers);
+      localMarkers.forEach(m=>{
+        markers.push(m);
+      });
+      
+      
+    }
+    
+    
+    markers.push(e.getPosition());
+    localStorage.markers = JSON.stringify(markers);
+  });
+
+
+
+
+  drawingManager.addListener('rectanglecomplete', e => {
+    const bounds = e.getBounds();
+    rects.push(bounds);
+    localStorage.rects = JSON.stringify(rects);
+
+
+
+  });
+  drawingManager.addListener('circlecomplete', e => {
+    const circle = {};
+    circle.center = e.getCenter();
+    circle.radius = e.getRadius();
+    circles.push(circle);
+    localStorage.circles = JSON.stringify(circles);
+
+
+
+  });
+
+
+
+  if (localStorage.markers) {
+    const storedMarkers = JSON.parse(localStorage.markers);
+    storedMarkers.forEach(m => {
+      const marker = new AdvancedMarkerElement({
+        position: m,
+        map
+
+      });
+    });
+  }
+
+
+  if (localStorage.rects) {
+    const storedRects = JSON.parse(localStorage.rects);
+    storedRects.forEach(r => {
+      const rectangle =  new google.maps.Rectangle({
+
+        map,
+        bounds:r
+
+      });
+    });
+  }
+  if (localStorage.circles) {
+    const storedCircles = JSON.parse(localStorage.circles);
+    storedCircles.forEach(c => {
+      const circle = new google.maps.Circle({
+
+        map,
+        center: c.center,
+        radius: c.radius
+
+      });
+
+
+    });
+  }
+
+
 }());

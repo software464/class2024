@@ -6,33 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       
 
-        .videoHOlder {
-            width: 30%;
+        body{
+            display: flex;
+        }
+        #Left {
+            height: 500px
            
-            border: 10px solid red;
-            
-        
-            
 
         }
-        p{
+
+        .videoHolder {
+           width: 50%;
+           
+
+            border: 10px double red;
+
+
+
+
+
+        }
+
+        p {
             margin: 2em;
             color: brown;
             font-weight: bold;
 
-            
-        }
-        
-
-        .videoPlayer {
-
-            width: 75%;
-            height: 50%;
 
         }
-        img{
+
+
+        .video {
+
+          
+            float: right;
+            width: 50%;
+            align-self: center;
+
+        }
+
+        img {
             width: 100%;
             height: 80%;
         }
@@ -40,44 +54,32 @@
 </head>
 
 <body>
-    <h1>Please click on a video to begin playback</h1>
-    <div class="videoHOlder">
-        <img src=" "alt="">
-        <p></p>
+    <div id="Left">
+        <h1>please click on a video to  begin playback</h1>
+        
+        <div class="videoHolder">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="videoHolder">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="videoHolder">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="videoHolder">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        
     </div>
-    <div class="videoHOlder">
-        <img src="" alt="">
-        <p></p>
+
+
+    <div class="video">
+         <video controls class="videoPlayer" src=""></video>
     </div>
-    <div class="videoHOlder">
-        <img src="" alt="">
-        <p></p>
-    </div>
-    <div class="videoHOlder">
-        <img src="" alt="">
-        <p></p>
-    </div>
-    <div class="videoHOlder">
-        <img src="" alt="">
-        <p></p>
-    </div>
-    <div class="videoHOlder">
-        <img src="" alt="">
-        <p></p>
-    </div>
-    <div class="videoHOlder">
-        <img src="" alt="">
-        <p></p>
-    </div>
-    <div class="videoHOlder">
-        <img src="" alt="">
-        <p></p>
-    </div>
-    <div class="videoHOlder">
-        <img src="" alt="">
-        <p></p>
-    </div>
-    <div class="video"> <video controls class="videoPlayer" src="">videos</video></div>
     <script src="hw.js"></script>
 </body>
 
