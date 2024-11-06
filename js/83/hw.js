@@ -20,6 +20,11 @@ class element{
     addChild(child){
         this.children.push(child);
 }
+removeChild(child){
+    let index=this.children.indexOf(child);
+    this.children.splice(index);
+
+}
 }
 
 class div extends element {
@@ -56,6 +61,8 @@ const h12 =new h1("c");
 div1.addChild(h11);
 div1.addChild(h12);
 console.log(div1);
+div1.removeChild(h12);
+div1.setInnerText("new div inner text");
 div1.render();
 
 
