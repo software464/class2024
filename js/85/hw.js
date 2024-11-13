@@ -67,7 +67,7 @@ setInterval(() => {//
 
 
     });
-    context.fill();
+    //context.fill();
 
 }, 1);
 
