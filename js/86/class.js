@@ -38,7 +38,7 @@
 
 
                 context.fillText(` Game Over :( Your score  ${score}`, 50, 20);
-                //goAudio.play();
+                goAudio.play();
 
                 clearIinterval(intervalID);
 
@@ -89,6 +89,7 @@
             appleX = createAppleX();
             appleY = createAppleY();
             speed -= 25;
+            
             clearInterval(intervalID);
             startGame(speed);
             // context.drawImage(apple, appleX, appleY);

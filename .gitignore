@@ -1,4 +1,6 @@
 *.txt
 *.mp4
 progress/
+node_modules/
+
 
