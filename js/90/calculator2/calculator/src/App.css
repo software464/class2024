@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.calculator{
+  display: grid;
+  grid-template-columns: repeat(3,5em);
+  gap: 1em;
+}
+.calculator  input{
+  grid-column: 1/4;
+  text-align: right;
+  font-size: 1.5em;
+}
+.calculator button{
+  font-weight: bold;
+}
+.calculator :last-child{
+  grid-column: 1/4;
+  text-align: center;
+}
