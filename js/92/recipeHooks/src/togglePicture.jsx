@@ -14,10 +14,7 @@ export default function TogglePicture(props) {
   return (
     <>
     
-      {state.pictureShowing ? <img src={picture} /> : null}
-        <br />
-        
-        <button onClick={toggle}>{state.pictureShowing ? 'hide picture' : 'show picture'}</button> 
+     
         </>
   )
 }

@@ -3,39 +3,48 @@ import React from 'react';
 import ListComponent from './ListComponent';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import TogglePicture from './togglepicture';
+//import TogglePicture from './togglepicture';
+import { useState } from "react";
 
-export default class Recipe extends Component {
-  state = {
-    pictureShowing: true
-  };
+export default function Recipe(props)  {
+  const { name, ingredients, directions, picture } = props.recipe || {};
+  let [pictureStatus,setPicture]=useState({
+    pictureShowing:true
+    
+  });
 
-  togglePicture = () => {
-    this.setState({
-      pictureShowing: !this.state.pictureShowing
+
+ function togglePicture() 
+    
+  {
+    setPicture({
+      pictureShowing: !pictureStatus.pictureShowing
     });
   }
 
-  render() {
-    const { name, ingredients, directions, picture } = this.props.recipe || {};
+   
 
-    const { pictureShowing } = this.state;
+    
 
-    if (! name) {
-      return (<div>loading...</div>)
-    }
+  if (! name) {
+    return (<div>loading...</div>)
+  }
 
     return (
+      
       <>
         <h2>{name}</h2>
-        <TogglePicture picture={picture} />
+        {pictureStatus.pictureShowing ? <img src={picture} /> : null}
+        <br />
+        
+        <button onClick={togglePicture}>{pictureStatus.pictureShowing ? 'hide picture' : 'show picture'}</button> 
        
         <ListComponent name="ingredients" list={ingredients} />
         <ListComponent name="directions" list={directions} />
       </>
     );
   }
-}
+
 
 Recipe.propTypes = {
   recipe: PropTypes.shape({
