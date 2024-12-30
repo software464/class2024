@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  <style>
+       
+    #users,#posts{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    #user,#post{
+        border:3px,solid,black
+
+    }
+   
+   
+    #users h1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+    }
+    
+    #posts h1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+    }
+    #backButton{
+        grid-column-start: 3;
+        grid-column-end: 4;
+
+    }
+</style>
+</head>
+<body>
+
+
+<div id="container">
+    
+</div>
+
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
