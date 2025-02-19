@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+let contactId=0;
 let contacts = [
-  { first: "azriel", last: "jurkansky", email: "azju323@Gmail.com", phone: 8482101070, id: 1 },
-  { first: "yy", last: "jurkansky", email: "yy323@Gmail.com", phone: 7325037041, id: 2 }
+  { first: "azriel", last: "jurkansky", email: "azju323@Gmail.com", phone: 8482101070, id: ++contactId },
+  { first: "yy", last: "jurkansky", email: "yy323@Gmail.com", phone: 7325037041, id: ++contactId }
 ];
 
 /* GET home page. */
@@ -29,7 +30,7 @@ router.get('/addContact', (req, res, next) => {
 
 })
 router.post('/addContact', (req, res, next) => {
-  contacts.push(req.body)
+  contacts.push({...req.body,id:++contactId})
   res.writeHead(301, { location: "/" })
   res.end();
 
@@ -56,15 +57,22 @@ router.post('/editContact/:id', (req, res, next) => {
   res.writeHead(301, { location: "/" })
   res.end();
   
-  })
-  router.get('/api/contacts',(req,res,next)=>{
-    res.send(contacts)
-  
   
 
   
 
 
 })
+router.get('/:id',(req,res,next)=>{
+  let selectedContact = contacts.find(c => c.id == Number(req.params.id));
+  if(!selectedContact){
+    return res.sendStatus(404);
+  }
+
+  res.send(selectedContact)
+
+})
+
+
 
 module.exports = router;
