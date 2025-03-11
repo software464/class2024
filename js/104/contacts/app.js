@@ -37,5 +37,34 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 module.exports = app;
+
+// Get the client
+
+
+// Create the connection to database
+(async ()=>{
+  let mysql= require('mysql2/promise') ;
+   global.connection = await mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password:"",
+  database: 'azrielNode',
+});
+// try {
+//   const [results, fields] = await global.connection.query(
+//     'SELECT * FROM `contacts` '
+//   );
+
+//   console.log(results); // results contains rows returned by server
+//   console.log(fields); // fields contains extra meta data about results, if available
+// } catch (err) {
+//   console.log(err);
+// }
+
+})()
+  
+
+
+
+
